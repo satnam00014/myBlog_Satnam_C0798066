@@ -1,11 +1,11 @@
 .navbar {
   box-sizing: border-box;
 }
-nav {
+.navbar nav {
   background: cornflowerblue;
   height: 80px;
 }
-label.logo {
+.navbar label.logo {
   color: white;
   font-size: 2em;
   line-height: 80px;
@@ -20,17 +20,17 @@ label.logo {
 .navbar a{
     text-decoration: none;
 }
-nav ul {
+.navbar nav ul {
   list-style: none;
   float: right;
   margin-right: 20px;
 }
-nav ul li {
+.navbar nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a {
+.navbar nav ul li a {
   text-decoration: none;
   color: white;
   padding: 7px 14px;
@@ -38,11 +38,12 @@ nav ul li a {
   font-size: 17px;
   text-transform: uppercase;
 }
-nav ul li a.active,nav ul li a:hover{
-    background: rgb(57, 119, 233);
-    transition: .5s;
+.navbar nav ul li a.active,nav ul li a:hover{
+  font-weight: bold;
+  background: rgb(57, 119, 233);
+  transition: .5s;
 }
-nav .checkbtn{
+.navbar nav .checkbtn{
     font-size: 30px;
     color: white;
     float: right;
@@ -56,9 +57,8 @@ footer {
     font-size: 20px;
     width: 100%;
     left: 0px;
-    padding: 1px;
+    padding: 0.5em;
     bottom: 0px;
-    height: 50px;
     color: white;
     display: inline-flex;
     align-items: center;
@@ -68,19 +68,19 @@ footer {
   display: none;
 }
 @media screen and (max-width: 990px) {
-  label.logo {
+  .navbar label.logo {
     font-size: 30px;
     padding-left: 50px;
   }
-  nav ul li a {
+  .navbar nav ul li a {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 900px) {
-  nav .checkbtn{
+  .navbar nav .checkbtn{
     display: block;
 }
-  ul {
+.navbar ul {
     z-index: 1;
     position: fixed;
     width: 100%;
@@ -91,12 +91,12 @@ footer {
     text-align: center;
     transition: all 0.5s;
   }
-  nav ul li {
+  .navbar nav ul li {
     display: block;
     margin: 50px 0;
     line-height: 30px;
   }
-  nav ul li a {
+  .navbar nav ul li a {
     font-size: 20px;
   }
   #check:checked ~ ul {
@@ -104,7 +104,7 @@ footer {
   }
 }
 @media screen and (max-width: 430px) {
-  label.logo {
+  .navbar label.logo {
     font-size: 1em;
     padding-left: 16px;
   }
