@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/content.css">
+<link rel="icon" href="media/logo.jpeg">
+<title>Home</title>
+</head>
+<body id="mainbody">
+    <div class="navbar">
+        <nav>
+            <input type="checkbox" id="check" onclick="preventScroll()">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="index.html">
+                <img src="media/logo.jpeg" alt="Home" class="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Book ticket</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="upper_section">
+        <img src="media/image1.jpeg" alt="image1" style="max-width: 100%;height:auto;">
+    </div>
+    <section>
+    <div class="places_section">
+        <br>
+        <h2>Places to Visit in Kashmir</h2><br>
+        <div class="place">
+            <img src="media/travel.jpeg" alt="trade">
+            <p>
+                Due to our close business association with hotels to 
+                suit the need of every traveling tourist, we provide 
+                excellent rates and value for money for our esteemed 
+                clients.
+            </p>
+        </div><div class="place">
+            <img src="media/travel.jpeg" alt="trade">
+            <p>
+                Due to our close business association with hotels to 
+                suit the need of every traveling tourist, we provide 
+                excellent rates and value for money for our esteemed 
+                clients.
+            </p>
+        </div><div class="place">
+            <img src="media/travel.jpeg" alt="trade">
+            <p>
+                Due to our close business association with hotels to 
+                suit the need of every traveling tourist, we provide 
+                excellent rates and value for money for our esteemed 
+                clients.
+            </p>
+        </div>
+    </div>
+    </section>
+    <aside>
+        <div class="aside-list">
+            <h3 style="color: white;">Destination you may like</h3>
+            <br>
+            <ul>
+                <li><a href="#">Delhi</a></li>
+                <li><a href="#">Jalandhar</a></li>
+                <li><a href="#">Lucknow</a></li>
+                <li><a href="#">Jammu</a></li>
+                <li><a href="#">Kashmir</a></li>
+                <li><a href="#">Agra</a></li>
+            </ul>
+        </div>
+    </aside>
+    <footer>
+        &copy; Copyright 2021. All Rights reserved.<br>
+        myblog_Satnam_C0798066
+        <script>
+            const navButton = document.getElementById("check");
+            const body = document.getElementById("mainbody");
+            const preventScroll = function (e) {
+                console.log("This is sample")
+                console.log(navButton.checked)
+                if (navButton.checked) {
+                    // Disable scroll
+                    body.style.overflow = "hidden";
+                    body.style.position = "fixed";
+                } else {
+                    // Enable scroll
+                    body.style.overflow = "auto";
+                    body.style.position = "static";
+                }
+            };
+        </script>
+    </footer>
+</body>
+</html> 
