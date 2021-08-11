@@ -94,18 +94,37 @@ aside{
     background: rgb(255 255 255 /60%);
 }
 .places_section .place img{
-    width: 100%;
+    display: block;
+    width: 50%;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
-    margin: 1em;
+    margin-top: 1em;
     border-radius: 0.5em;
+}
+#kashmir_text{
+    color:white;
+    font-size:4em;
+    position:absolute;
+    top : 35%;
+    left:45%;
+    font-style: italic;
+    font-family: monospace;
+    font-weight: bold;
+}
+.places_section h2{
+    color: white;
 }
 .places_section .place img:hover{
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.25),0 2px 10px 0 rgba(0,0,0,0.25);
 }
 .places_section .place p{
     padding: 1em;
+    font-family: monospace;
+    font-size:x-large;
+    color:white;
+    font-weight:bold;
+
 }
 footer{
     margin-top: 1em;
