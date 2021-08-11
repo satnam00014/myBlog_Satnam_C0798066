@@ -2,54 +2,96 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="icon" href="media/logo.jpeg">
+<title>Home</title>
 </head>
-<body>
-<section style="max-width: 50%;">
-    <div class="slideshow-container">
-
-        <div class="mySlides">
-            <img src="media/image1.jpeg" >
-        </div>
-    
-        <div class="mySlides">
-            <img src="media/image2.jpeg" >
-        </div>
-    
-        <div class="mySlides">
-            <img src="media/image3.jpeg" >
-        </div>
-    
-        <div class="mySlides">
-            <img src="media/image4.jpeg" >
-        </div>
-    
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    
+<body id="mainbody">
+    <div class="navbar">
+        <nav>
+            <input type="checkbox" id="check" onclick="preventScroll()">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="index.html">
+                <img src="media/logo.jpeg" alt="Home" class="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Book ticket</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
     </div>
-</section>
+    <section>
+        <div class="slideshow-container">
 
+            <div class="mySlides">
+                <img src="media/image1.jpeg" >
+            </div>
+        
+            <div class="mySlides">
+                <img src="media/image2.jpeg" >
+            </div>
+        
+            <div class="mySlides">
+                <img src="media/image3.jpeg" >
+            </div>
+        
+            <div class="mySlides">
+                <img src="media/image4.jpeg" >
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+    </section>
+    <aside>
 
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
+    </aside>
+    <footer>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+        
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+        
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slides[slideIndex-1].style.display = "block";  
+            }
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+            const navButton = document.getElementById("check");
+            const body = document.getElementById("mainbody");
+            const preventScroll = function (e) {
+                console.log("This is sample")
+                console.log(navButton.checked)
+                if (navButton.checked) {
+                    // Disable scroll
+                    body.style.overflow = "hidden";
+                    body.style.position = "fixed";
+                } else {
+                    // Enable scroll
+                    body.style.overflow = "auto";
+                    body.style.position = "static";
+                }
+            };
+        </script>
+    </footer>
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  slides[slideIndex-1].style.display = "block";  
-}
-</script>
 
 </body>
 </html> 

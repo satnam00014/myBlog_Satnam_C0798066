@@ -1,12 +1,19 @@
 
 * {
-    box-sizing: border-box
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 body {
-    font-family: Verdana, sans-serif; margin:0
+    font-family: Verdana, sans-serif; 
+    margin: 0;
+    padding: 0;
 }
 .mySlides {
-    display: none
+    padding: 0;
+    margin: 0;
+    display: none;
 }
 .mySlides img {
     vertical-align: middle;
@@ -17,7 +24,6 @@ body {
 .slideshow-container {
   max-width: 100%;
   position: relative;
-  margin: auto;
 }
 
 /* Next & previous buttons */
@@ -47,6 +53,10 @@ body {
 border-radius: 1em;
   background-color: white;
   color: black;
+}
+
+section{
+    max-width: 70%;
 }
 
 /* On smaller screens, decrease text size */
