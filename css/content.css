@@ -17,6 +17,21 @@ section{
 .content_container{
     max-width: 100%;
 }
+.upper_section{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.upper_section .centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:4em;
+    font-style: italic;
+    font-family: monospace;
+    font-weight: bold;
+  }
 .content_container .content{
     max-width: 95%;
     padding: 1em;
@@ -95,7 +110,7 @@ aside{
 }
 .places_section .place img{
     display: block;
-    width: 50%;
+    width: 70%;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -145,11 +160,17 @@ footer{
     table, th, td {
         font-size : 110%;
     }
+    .upper_section .centered {
+        font-size:3em;
+      }
 }
 @media screen and (max-width:650px) {
     .places_section .place{
         width: 92%;
     }
+    .upper_section .centered {
+        font-size:2em;
+      }
     
 }
 @media screen and (max-width:450px) {
